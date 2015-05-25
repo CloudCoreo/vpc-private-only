@@ -10,12 +10,21 @@
 ##   this means that a public vpc subnet must already be created
 ######################################################################
 
+######################################################################
+## make sure there is a vpc for the subnets to be contained in
+######################################################################
+coreo_aws_vpc_vpc "${VPC_NAME}" do
+  action :find_or_create
+  cidr "${VPC_OCTETS}/16"
+  internet_gateway true
+end
+
 
 ######################################################################
 ## create a routetable for the public subnet, route everything
 ## to the internet gateway
 ## NOTE:
-##    You must not use action :sustain to maintain routes with the 
+##    You must NOT use action :sustain to maintain routes with the 
 ##    HA-NAT becuase cloudcoreo will revert ha-nat.py changes.
 ######################################################################
 coreo_aws_vpc_routetable "${PRIVATE_ROUTE_NAME}" do
