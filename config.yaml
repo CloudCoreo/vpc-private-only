@@ -1,0 +1,31 @@
+variables:
+    VPC_NAME:
+        required: true
+        description: the name of the VPC
+    NAT_GROUP_SIZE_MIN:
+        required: true
+        description: the miniumum number of NAT instances to launch
+        default: 1
+        type: number
+    NAT_GROUP_SIZE_MAX:
+        required: true
+        description: the maximum number of NAT instances to launch
+        default: 1
+        type: number
+    NAT_NAME:
+        required: true
+        description: the name of the NAT
+    PRIVATE_SUBNET_NAME:
+        required: true
+        description: the cloudcoreo name of the private vpc subnets
+        default: my-private-subnet
+    PRIVATE_ROUTE_NAME:
+        required: true
+        description: the name to give to the private route
+        default: my-private-route
+    NAT_INGRESS_PORTS:
+        required: true
+        description: allowed ingress ports on the nat
+        default:
+            - "443"
+        type: array
