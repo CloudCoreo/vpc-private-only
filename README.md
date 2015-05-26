@@ -4,9 +4,6 @@ cloudcoreo-vpc-private
 ## Description
 This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets to an existing public-subnet-only VPC.
 
-## Diagram
-![alt text](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/vpc-private-only.png "Private VPC across 3 subnets")
-
 ## Tags
 1. Network
 1. VPC
@@ -25,3 +22,6 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
   * required: true
   * description: the name to give to the private route
   * default: test-private-route
+
+## Diagram
+![alt text](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/vpc-private-only.png "Private VPC across 3 subnets")
