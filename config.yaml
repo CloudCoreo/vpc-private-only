@@ -17,6 +17,7 @@ variables:
         default: test-private-route
     REGION:
         required: true
+        description: use default except for multiple region use cases
         default: "INSTANCE::region"
         type: string
     PREFIX:
