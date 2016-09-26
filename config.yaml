@@ -5,7 +5,7 @@ variables:
         default: 'test-vpc'
     VPC_OCTETS:
         required: true
-        description: the /16 net of the VPC to look for - i.e 123.123.0.0
+        description: the /16 net of the VPC to look for - i.e 10.11.0.0
         default: '10.11.0.0'
     PRIVATE_SUBNET_NAME:
         required: true
@@ -15,3 +15,15 @@ variables:
         required: true
         description: the name to give to the private route
         default: test-private-route
+    REGION:
+        required: true
+        default: "INSTANCE::region"
+        type: string
+    PREFIX:
+        required: false
+        description: when used will use the value to prefix the names of all converged objects
+        type: string
+    SUFFIX:
+        required: false
+        description: when used will use the value to suffix the names of all converged objects
+        type: string
