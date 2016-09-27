@@ -20,10 +20,6 @@ variables:
         description: use default except for multiple region use cases
         default: "INSTANCE::region"
         type: string
-    PREFIX:
-        required: false
-        description: when used will use the value to prefix the names of all converged objects
-        type: string
     SUFFIX:
         required: false
         description: when used will use the value to suffix the names of all converged objects

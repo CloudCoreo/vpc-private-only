@@ -13,7 +13,7 @@
 ######################################################################
 ## make sure there is a vpc for the subnets to be contained in
 ######################################################################
-coreo_aws_vpc_vpc "${PREFIX}${VPC_NAME}${SUFFIX}" do
+coreo_aws_vpc_vpc "${VPC_NAME}${SUFFIX}" do
   action :sustain
   cidr "${VPC_OCTETS}/16"
   internet_gateway true
@@ -28,9 +28,9 @@ end
 ##    You must NOT use action :sustain to maintain routes with the 
 ##    HA-NAT becuase cloudcoreo will revert ha-nat.py changes.
 ######################################################################
-coreo_aws_vpc_routetable "${PREFIX}${PRIVATE_ROUTE_NAME}${SUFFIX}" do
+coreo_aws_vpc_routetable "${PRIVATE_ROUTE_NAME}${SUFFIX}" do
   action :create
-  vpc "${PREFIX}${VPC_NAME}${SUFFIX}"
+  vpc "${VPC_NAME}${SUFFIX}"
   number_of_tables 3
   region "${REGION}"
 end
@@ -42,11 +42,11 @@ end
 ## percent_of_vpc_allocated
 ##   split, but use only this percentage of the entire vpc range
 ######################################################################
-coreo_aws_vpc_subnet "${PREFIX}${PRIVATE_SUBNET_NAME}${SUFFIX}" do
+coreo_aws_vpc_subnet "${PRIVATE_SUBNET_NAME}${SUFFIX}" do
   action :sustain
   number_of_zones 3
   percent_of_vpc_allocated 50
-  route_table "${PREFIX}${PRIVATE_ROUTE_NAME}${SUFFIX}"
-  vpc "${PREFIX}${VPC_NAME}${SUFFIX}"
+  route_table "${PRIVATE_ROUTE_NAME}${SUFFIX}"
+  vpc "${VPC_NAME}${SUFFIX}"
   region "${REGION}"
 end
