@@ -9,6 +9,10 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 1. VPC
 1. Private Subnet
 
+## Categories
+
+1. Network
+
 <h3>OVERRIDE OPTIONAL VARIABLES</h3>
 * <b>VPC_NAME:</b>
   * required: true
