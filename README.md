@@ -63,7 +63,7 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 
 
 ## Diagram
-![alt text](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/diagram.png "Private VPC across 3 subnets"
+![diagram](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/diagram.png "Private VPC across 3 subnets")
 
 
 ## Icon
