@@ -5,6 +5,7 @@ cloudcoreo-vpc-private
 ## Description
 This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets to an existing public-subnet-only VPC.
 
+
 ## Hierarchy
 ![composite inheritance hierarchy](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/hierarchy.png "composite inheritance hierarchy")
 
