@@ -18,6 +18,7 @@ coreo_aws_vpc_vpc "${VPC_NAME}${SUFFIX}" do
   cidr "${VPC_OCTETS}/16"
   internet_gateway true
   region "${REGION}"
+  tags ${VPC_TAGS}
 end
 
 
