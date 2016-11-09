@@ -45,7 +45,9 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 
 ## Optional variables with no default
 
-**None**
+### `VPC_TAGS`:
+  * description: tags to apply to the vpc
+  * default: 
 
 
 ## Optional variables with default
