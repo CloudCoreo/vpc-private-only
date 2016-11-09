@@ -30,7 +30,7 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 
 ### `REGION`:
   * description: use default except for multiple region use cases
-  * default: INSTANCE::region
+  * default: PLAN::region
 
 ### `PRIVATE_ROUTE_NAME`:
   * description: the name to give to the private route
