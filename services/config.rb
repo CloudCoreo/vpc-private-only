@@ -17,7 +17,6 @@ coreo_aws_vpc_vpc "${VPC_NAME}${SUFFIX}" do
   action :sustain
   cidr "${VPC_OCTETS}/16"
   internet_gateway true
-  region "${REGION}"
   tags ${VPC_TAGS}
 end
 
@@ -33,7 +32,6 @@ coreo_aws_vpc_routetable "${PRIVATE_ROUTE_NAME}${SUFFIX}" do
   action :create
   vpc "${VPC_NAME}${SUFFIX}"
   number_of_tables 3
-  region "${REGION}"
 end
 
 
@@ -49,5 +47,4 @@ coreo_aws_vpc_subnet "${PRIVATE_SUBNET_NAME}${SUFFIX}" do
   percent_of_vpc_allocated 50
   route_table "${PRIVATE_ROUTE_NAME}${SUFFIX}"
   vpc "${VPC_NAME}${SUFFIX}"
-  region "${REGION}"
 end
