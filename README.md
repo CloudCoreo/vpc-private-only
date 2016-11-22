@@ -43,14 +43,14 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 
 
 
-## Optional variables with no default
+## Optional variables with default
 
 ### `VPC_TAGS`:
   * description: tags to apply to the vpc
   * default: 
 
 
-## Optional variables with default
+## Optional variables with no default
 
 ### `SUFFIX`:
   * description: when used will use the value to suffix the names of all converged objects
