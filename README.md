@@ -70,5 +70,5 @@ This [CloudCoreo](http://www.cloudcoreo.com) repository will add private subnets
 
 
 ## Icon
-
+![icon](https://raw.githubusercontent.com/CloudCoreo/vpc-private-only/master/images/icon.png "icon")
 
