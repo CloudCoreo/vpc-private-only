@@ -1,4 +1,9 @@
 ######################################################################
+##
+## This Composite makes a VPC, a Private subnet, and a Private route.
+##
+######################################################################
+##
 ## variables
 ##   PRIVATE_ROUTE_NAME
 ##   PRIVATE_SUBNET_NAME
@@ -23,8 +28,8 @@ end
 
 
 ######################################################################
-## create a routetable for the public subnet, route everything
-## to the internet gateway
+## Create a Private routetable for the Private subnet
+##
 ## NOTE:
 ##    You must NOT use action :sustain to maintain routes with the 
 ##    HA-NAT becuase cloudcoreo will revert ha-nat.py changes.
@@ -38,6 +43,7 @@ end
 
 
 ######################################################################
+## Private Subnet creation
 ## number_of_zones
 ##   cidr will be split up among all zones specified in "number_of_zones"
 ## percent_of_vpc_allocated
