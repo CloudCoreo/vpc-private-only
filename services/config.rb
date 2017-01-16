@@ -32,7 +32,7 @@ end
 coreo_aws_vpc_routetable "${PRIVATE_ROUTE_NAME}${SUFFIX}" do
   action :create
   vpc "${VPC_NAME}${SUFFIX}"
-  number_of_tables 3
+  number_of_tables 2
   region "${REGION}"
 end
 
@@ -45,7 +45,7 @@ end
 ######################################################################
 coreo_aws_vpc_subnet "${PRIVATE_SUBNET_NAME}${SUFFIX}" do
   action :sustain
-  number_of_zones 3
+  number_of_zones 2
   percent_of_vpc_allocated 50
   route_table "${PRIVATE_ROUTE_NAME}${SUFFIX}"
   vpc "${VPC_NAME}${SUFFIX}"
